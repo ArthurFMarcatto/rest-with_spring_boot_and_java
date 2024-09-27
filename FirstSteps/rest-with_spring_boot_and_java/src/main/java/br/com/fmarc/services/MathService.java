@@ -1,42 +1,30 @@
 package br.com.fmarc.services;
 
+
 public class MathService {
 
-	private double numberOne;
-	private double numberTwo;
-
-	public Double sumTwoNumbers(double numberOne, double numberTwo) {
-		this.numberOne = numberOne;
-		this.numberTwo = numberTwo;
-
-		return 1D;
-	}
-	public Double subTwoNumbers(double numberOne, double numberTwo) {
-		this.numberOne = numberOne;
-		this.numberTwo = numberTwo;
-		
-		return 1D;
-	}
-	public Double divTwoNumbers(double numberOne, double numberTwo) {
-		this.numberOne = numberOne;
-		this.numberTwo = numberTwo;
-		
-		return 1D;
-	}
-	public Double mulTwoNumbers(double numberOne, double numberTwo) {
-		this.numberOne = numberOne;
-		this.numberTwo = numberTwo;
-		
-		return 1D;
+	public Double sum(Double numberOne, Double numberTwo) {
+		return (numberOne) + (numberTwo);
 	}
 
-	public double getNumberOne() {
-		return numberOne;
+	public Double substraction(Double numberOne, Double numberTwo) {
+		return (numberOne) - (numberTwo);
 	}
 
-	public double getNumberTwo() {
-		return numberTwo;
+	public Double multiplication(Double numberOne, Double numberTwo) {
+		return (numberOne) * (numberTwo);
+	}
+
+	public Double division(Double numberOne, Double numberTwo) {
+		return (numberOne) / (numberTwo);
+	}
+
+	public Double mean(Double numberOne, Double numberTwo) {
+		return ((numberOne) + (numberTwo)) / 2;
+	}
+
+	public Double squareRoot(Double number) {
+		return Math.sqrt((number));
 	}
 
 }
-
