@@ -1,4 +1,4 @@
-package br.com.fmarc;
+package br.com.fmarc.controllers;
 
 import java.util.concurrent.atomic.AtomicLong;
 
@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import br.com.fmarc.services.GreetingService;
+
 @RestController	
 public class GreetingController {
 	
@@ -14,9 +16,9 @@ public class GreetingController {
 	private final AtomicLong counter = new AtomicLong();
 	
 	@RequestMapping(value = "/greeting", method = RequestMethod.GET)
-	public Greeting greeting (
+	public GreetingService greeting (
 			@RequestParam(value = "name", defaultValue = "World")	
 			String name) {
-		return new Greeting(counter.incrementAndGet(),String.format(template, name));
+		return new GreetingService(counter.incrementAndGet(),String.format(template, name));
 	}
 }

@@ -1,10 +1,10 @@
-package br.com.fmarc;
+package br.com.fmarc.services;
 
-public class Greeting {
+public class GreetingService {
 	private final long id;
 	private final String content;
 	
-	public Greeting (long id, String content) {
+	public GreetingService (long id, String content) {
 		this.id = id;
 		this.content = content;
 	}
